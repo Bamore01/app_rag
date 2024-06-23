@@ -2,8 +2,8 @@ import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
 from base import retrieval
-hf_email=st.secrets["hf_email"]
-hf_pass=st.secrets["hf_pass"]
+from key import hf_email, hf_pass
+
 @st.cache_resource
 def cached_retrieval(answer):
     return retrieval(answer)
