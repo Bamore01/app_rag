@@ -27,7 +27,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
         with st.spinner("Generando respuesta..."):
             answer = str(prompt)
             answer = f'"{answer}"'
-            response = cached_retrieval(answer) 
+            response = retrieval(answer) 
             st.write(response) 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
