@@ -4,11 +4,6 @@ from hugchat.login import Login
 from base import retrieval
 from key import hf_email, hf_pass
 
-@st.cache_resource
-def cached_retrieval(answer):
-    return retrieval(answer)
-# App title
-
 st.set_page_config(page_title="🤗💬 HugChat")
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
